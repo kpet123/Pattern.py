@@ -14,25 +14,43 @@ Pattern.py Module API- lists how to use all functions and classes in Pattern.py
 2.  listseqRec(infile)	    
 
 Returns list of seq records from fasta file 
+Note: if want to use infile again, must move reading frame back to beginning
 ***********
 
 3.  listDef(infile)	
 
 Returns list of seq record descriptions from fasta file
+Note: if want to use infile again, must move reading frame back to beginning
+************
 
+4. listSeq(infile) 
 
-listSeq(infile) 	                                 returns list of sequences from fasta file
+Returns list of sequences from fasta file
+Note: if want to use infile again, must move reading frame back to beginning
 
+*************
+5. discern_ebox(infile)
 
-discern_ebox(infile)                             	 For known pilli: generates all sequences matching ebox motif from fasta file then prompts user to discern real ones 
+Infile: FASTA file of known CnaBs
+Prints out every instance of ebox motif, then user is promted to identify the correct instance (based on surrouding AAs)
+Returns a list with start index of the ebox in each sequence in the input FASTA file
+Note: not in PatternTest.py test file because list already generated and confirmed
 
+**************
 
-writeFromFasta()	                                Outputs hits for given fasta file with particular search parameters
+6. writeFromFasta()
+WORKS WITH DEPRECATED MOTIF SEARCH AND HAS NOT BEEN UPDATED!
+Outputs hits for given fasta file with particular search parameters (need hardcoded motif function)
 
+**************
 
-norm(motifcount, seq)	                            normalizes motif count
+7. norm(int motifcount, Seq seq)	
+Returns integer equal to normalizes motif count (number of motifs found divided by length of sequence)
 
+**************
 
-findEnclosed(string, start, end)	" given a start and end character, returns what is in between. LIMITATIONS: start and end can only appear once in the string
+8.  findEnclosed(string, start, end)
+
+Given a start and end character, returns what is in between. LIMITATIONS: start and end can only appear once in the string
 #used to find name of organism from alignment data, name is enclosed by '[' and ']'"
 
