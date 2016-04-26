@@ -52,5 +52,5 @@ Returns integer equal to normalizes motif count (number of motifs found divided 
 8.  findEnclosed(string, start, end)
 
 Given a start and end character, returns what is in between. LIMITATIONS: start and end can only appear once in the string
-#used to find name of organism from alignment data, name is enclosed by '[' and ']'"
+Used to find name of organism from alignment data, name is enclosed by '[' and ']'"
 
