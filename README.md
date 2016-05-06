@@ -52,3 +52,36 @@ Returns integer equal to normalizes motif count (number of motifs found divided 
 Given a start and end character, returns what is in between. LIMITATIONS: start and end can only appear once in the string
 Used to find name of organism from alignment data, name is enclosed by '[' and ']'"
 
+
+9.  reverse(string)
+
+Given a string, will return a string in reverse order (slow, will optimize)
+
+
+10. CnaBSearch(seq)
+
+
+Hard-coded search function for the CnaB sequence motif; input sequence, returns list of locations with CnaB motif.  This is used in makePattern_oo.py. Note: although this function is less flexible than the search() function in Motif (described later), it is much faster and thus better to use when large-scale search funtionality is needed. 
+
+11. findStop(seq)
+
+Input DNA sequence, returns sequence terminated after a stop codon. Note: sequence must be in-frame and forward
+
+12. Class Motif
+Holds a flexible motif object that can be searched for in sequences. Instantiate with motif string with specific formatting guidelines:
+	a. Each position is separated by space
+	b. "Any amino acid" denoted by 'x'
+	c. if a position can contain mutliple amino acids, input with no space
+For example, "a x x t yv" would be a motif with A in the first position, any amino acid in the second and third position, T in the fourth position, and Y or V in the fifth position. Note: not case sensitive. 
+
+Methods in motif: 
+	1. printf()
+	    prints out motif
+        2. search(seq)
+            functions the same way as CnaB search (see above) but flexible motif and slower
+
+
+
+
+
+
